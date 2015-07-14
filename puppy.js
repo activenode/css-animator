@@ -46,7 +46,9 @@ var cssAnimator = {
                 }
 
                 setTimeout(function(){
-                    finishedFunc($elem);
+                    if (finishedFunc) {
+                      finishedFunc($elem);  
+                    }
                 }, durationMs+5);
             }
         };
